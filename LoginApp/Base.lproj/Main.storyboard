@@ -4,14 +4,13 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,7 +38,7 @@
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="iPh-dq-LSm" kind="presentation" modalPresentationStyle="fullScreen" id="NzQ-WU-uow"/>
+                                                    <segue destination="iPh-dq-LSm" kind="presentation" modalPresentationStyle="fullScreen" id="2Vr-7d-tfj"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -53,13 +52,20 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="Forgot User Name?">
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleCallout"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="forgotUserAndPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3pu-ay-4Cg"/>
+                                                    <action selector="forgotUserPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mvc-0B-SIj"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Cw-4b-UQX">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Cw-4b-UQX">
                                                 <rect key="frame" x="186" y="0.0" width="102" height="54.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Password?">
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleCallout"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="forgotUserAndPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FJJ-Su-bS6"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -67,13 +73,16 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <color key="backgroundColor" red="0.90234268975980358" green="0.78541093044974886" blue="0.64423674978647938" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FlK-xd-Uvj" secondAttribute="trailing" constant="16" id="KoA-q2-mOm"/>
                             <constraint firstItem="FlK-xd-Uvj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Qeu-aJ-8OT"/>
                             <constraint firstItem="FlK-xd-Uvj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="axy-Nu-Omi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="UserLabel" destination="KfX-Du-nfh" id="W8v-aV-mhL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,7 +92,7 @@
         <scene sceneID="Nfw-1m-DOv">
             <objects>
                 <viewController id="iPh-dq-LSm" customClass="WelcomeViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5i7-fI-8nX">
+                    <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5i7-fI-8nX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -94,15 +103,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hny-Ci-8xq">
-                                <rect key="frame" x="102" y="362" width="116" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="85" id="mhG-3O-q9L"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Log Out"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Nc-Qh-p3A">
                                 <rect key="frame" x="139" y="143" width="23" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -110,9 +110,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hny-Ci-8xq">
+                                <rect key="frame" x="118" y="263" width="108" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="103" id="YG4-vX-y4x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="LogOutButton:" destination="iPh-dq-LSm" eventType="touchUpInside" id="TNa-1f-0Na"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wzX-F4-t2n"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.98938173365966309" green="1" blue="0.83852262850829939" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="hny-Ci-8xq" firstAttribute="centerX" secondItem="wzX-F4-t2n" secondAttribute="centerX" id="OXa-M6-CYN"/>
+                            <constraint firstItem="hny-Ci-8xq" firstAttribute="centerY" secondItem="wzX-F4-t2n" secondAttribute="centerY" id="z26-bG-ipo"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FX8-pt-MSW"/>
                 </viewController>
@@ -121,12 +137,4 @@
             <point key="canvasLocation" x="1128.75" y="17.95774647887324"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
