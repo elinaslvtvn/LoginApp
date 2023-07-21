@@ -12,18 +12,20 @@ final class WelcomeViewController: UIViewController {
     
     @IBOutlet var welcomeLabel: UILabel!
     
-    var user = ""
+    var user : String!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //welcomeLabel.text = "Welcome, \(user)"
+        welcomeLabel.text = "Welcome, \(user)"
     }
     
     
-    @IBAction func LogOutButton() {
-        //dismiss(animated: true)
+    
+    @IBAction func logOutBtn(_ sender: UIButton) {
+        dismiss(animated: true)
     }
+    
     
     
     
