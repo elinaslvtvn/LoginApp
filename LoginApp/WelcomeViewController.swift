@@ -14,20 +14,14 @@ final class WelcomeViewController: UIViewController {
     
     var user : String!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         welcomeLabel.text = "Welcome, \(user)"
     }
     
-    
-    
     @IBAction func logOutBtn(_ sender: UIButton) {
         dismiss(animated: true)
     }
-    
-    
-    
     
     /*
      // MARK: - Navigation
