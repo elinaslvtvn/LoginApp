@@ -38,7 +38,7 @@
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="validLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aCo-PQ-JTb"/>
+                                                    <action selector="validLogin" destination="BYZ-38-t0r" eventType="touchUpInside" id="ls9-kn-zFM"/>
                                                     <segue destination="iPh-dq-LSm" kind="presentation" modalPresentationStyle="fullScreen" id="2Vr-7d-tfj"/>
                                                 </connections>
                                             </button>
