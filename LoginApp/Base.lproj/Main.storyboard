@@ -92,30 +92,22 @@
         <!--Welcome View Controller-->
         <scene sceneID="Nfw-1m-DOv">
             <objects>
-                <viewController id="iPh-dq-LSm" customClass="WelcomeViewController" sceneMemberID="viewController">
+                <viewController id="iPh-dq-LSm" customClass="WelcomeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5i7-fI-8nX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMi-hl-zJS">
-                                <rect key="frame" x="98" y="93" width="105" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMi-hl-zJS">
+                                <rect key="frame" x="16" y="93" width="288" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Nc-Qh-p3A">
-                                <rect key="frame" x="139" y="143" width="23" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EsF-hy-BrR">
-                                <rect key="frame" x="128" y="254" width="75" height="35"/>
+                                <rect key="frame" x="123" y="254" width="85" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
                                 <connections>
                                     <action selector="logOutBtn:" destination="iPh-dq-LSm" eventType="touchUpInside" id="O1A-sH-cib"/>
                                 </connections>
@@ -123,8 +115,16 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wzX-F4-t2n"/>
                         <color key="backgroundColor" red="0.98938173365966309" green="1" blue="0.83852262850829939" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="JMi-hl-zJS" firstAttribute="top" secondItem="wzX-F4-t2n" secondAttribute="top" constant="93" id="j2M-uR-Nva"/>
+                            <constraint firstItem="JMi-hl-zJS" firstAttribute="leading" secondItem="wzX-F4-t2n" secondAttribute="leading" constant="16" id="qvd-eV-cF4"/>
+                            <constraint firstItem="wzX-F4-t2n" firstAttribute="trailing" secondItem="JMi-hl-zJS" secondAttribute="trailing" constant="16" id="wxN-SM-0JM"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FX8-pt-MSW"/>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="JMi-hl-zJS" id="Gk6-Vz-6Ul"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j12-Ud-qYO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
