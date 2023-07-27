@@ -38,6 +38,7 @@
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
                                                 </buttonConfiguration>
                                                 <connections>
+                                                    <action selector="correctLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="niR-CN-aY6"/>
                                                     <action selector="validLogin" destination="BYZ-38-t0r" eventType="touchUpInside" id="ls9-kn-zFM"/>
                                                     <segue destination="iPh-dq-LSm" kind="presentation" modalPresentationStyle="fullScreen" id="2Vr-7d-tfj"/>
                                                 </connections>
@@ -83,6 +84,7 @@
                     <connections>
                         <outlet property="UserLabel" destination="KfX-Du-nfh" id="W8v-aV-mhL"/>
                         <outlet property="passwordLabel" destination="6Ee-mV-FfI" id="uhZ-uC-xV7"/>
+                        <segue destination="iPh-dq-LSm" kind="presentation" id="JUu-Xh-zMi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -131,4 +133,7 @@
             <point key="canvasLocation" x="1128.75" y="17.95774647887324"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="2Vr-7d-tfj"/>
+    </inferredMetricsTieBreakers>
 </document>

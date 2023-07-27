@@ -26,13 +26,25 @@ class ViewController: UIViewController {
         welcomeVC.user = user
     }
     
+    
+    
+    @IBAction func correctLogin(_ sender: Any) {
+    }
+    
+//    override func performSegue(withIdentifier identifier: String, sender: Any?) {
+//        <#code#>
+//    }
+    
+    
+    
+    
     @IBAction func forgotUserPassword(_ sender: UIButton) {
         if sender.tag == 0 {
             showAlert(title: "Oops!", message: "Your login is \(user) 😉")
         } else {
             showAlert(title: "Oops!", message: "Your password is \(password) 😉")
         }
-    }
+    } 
     
     @IBAction func validLogin() {
         guard UserLabel.text == user, passwordLabel.text == password
