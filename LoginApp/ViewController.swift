@@ -52,6 +52,7 @@ class ViewController: UIViewController {
             showAlert(title: "Oops!", message: "Invalid login or password")
             return
         }
+        performSegue(withIdentifier: "showWelcomeVC", sender: nil)
     }
     
    
