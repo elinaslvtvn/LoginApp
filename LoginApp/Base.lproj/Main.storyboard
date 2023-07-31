@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -83,19 +84,19 @@
                     <connections>
                         <outlet property="UserLabel" destination="KfX-Du-nfh" id="W8v-aV-mhL"/>
                         <outlet property="passwordLabel" destination="6Ee-mV-FfI" id="uhZ-uC-xV7"/>
-                        <segue destination="iPh-dq-LSm" kind="presentation" identifier="showWelcomeVC" id="JUu-Xh-zMi"/>
+                        <segue destination="E25-xg-30i" kind="presentation" identifier="showWelcomeVC" id="JUu-Xh-zMi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="261.83206106870227" y="18.30985915492958"/>
         </scene>
-        <!--Welcome View Controller-->
+        <!--Home-->
         <scene sceneID="Nfw-1m-DOv">
             <objects>
-                <viewController id="iPh-dq-LSm" customClass="WelcomeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="iPh-dq-LSm" customClass="WelcomeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5i7-fI-8nX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMi-hl-zJS">
@@ -122,6 +123,7 @@
                             <constraint firstItem="wzX-F4-t2n" firstAttribute="trailing" secondItem="JMi-hl-zJS" secondAttribute="trailing" constant="16" id="wxN-SM-0JM"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="person.fill" catalog="system" id="9gk-ZT-zkI"/>
                     <navigationItem key="navigationItem" id="FX8-pt-MSW"/>
                     <connections>
                         <outlet property="welcomeLabel" destination="JMi-hl-zJS" id="Gk6-Vz-6Ul"/>
@@ -129,7 +131,102 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j12-Ud-qYO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1128.75" y="17.95774647887324"/>
+            <point key="canvasLocation" x="1024" y="885"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Srv-2Y-848">
+            <objects>
+                <viewController id="hPU-oq-BUX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QvB-9C-NjX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="POT-Ca-Rde">
+                                <rect key="frame" x="58" y="85" width="204" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4np-ag-5t8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RDL-Fo-LuD">
+                        <barButtonItem key="rightBarButtonItem" title="Bio" id="flz-XC-sYQ">
+                            <connections>
+                                <segue destination="muF-IP-YSJ" kind="presentation" id="kBb-zu-cca"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g68-p6-A0a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2531.25" y="819.71830985915494"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ASE-yt-lWH">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="muF-IP-YSJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RL1-XZ-ZLa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="text about" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXW-2f-B4d">
+                                <rect key="frame" x="95" y="172" width="130" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0P4-Y7-79M"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PrS-g7-6Qc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3319" y="820"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="5dI-fK-jtT">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="E25-xg-30i" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EUy-vd-6ta">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="iPh-dq-LSm" kind="relationship" relationship="viewControllers" id="lbH-2Y-iPk"/>
+                        <segue destination="woJ-zw-jcS" kind="relationship" relationship="viewControllers" id="45c-BO-1jL"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="afd-Ea-ehf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1024" y="18"/>
+        </scene>
+        <!--User-->
+        <scene sceneID="ijd-cd-rz0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="woJ-zw-jcS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="User" image="person.fill" catalog="system" id="GO0-g7-o3f"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zfA-m2-KJj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hPU-oq-BUX" kind="relationship" relationship="rootViewController" id="STM-Qe-zw5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8UI-OI-nxb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1766.25" y="819.71830985915494"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
