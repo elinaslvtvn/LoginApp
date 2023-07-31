@@ -191,7 +191,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="5dI-fK-jtT">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="E25-xg-30i" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="E25-xg-30i" customClass="TabBarController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EUy-vd-6ta">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
