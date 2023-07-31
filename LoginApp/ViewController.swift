@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         
     }
     
-    func unwindSegue(segue: UIStoryboardSegue) {
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
         UserLabel.text = ""
         passwordLabel.text = ""
     }
