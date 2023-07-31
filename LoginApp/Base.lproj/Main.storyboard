@@ -39,7 +39,6 @@
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="correctLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="niR-CN-aY6"/>
                                                     <action selector="validLogin" destination="BYZ-38-t0r" eventType="touchUpInside" id="ls9-kn-zFM"/>
                                                 </connections>
                                             </button>
@@ -133,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="1024" y="885"/>
         </scene>
-        <!--View Controller-->
+        <!--User Info View Controller-->
         <scene sceneID="Srv-2Y-848">
             <objects>
-                <viewController id="hPU-oq-BUX" sceneMemberID="viewController">
+                <viewController id="hPU-oq-BUX" customClass="UserInfoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QvB-9C-NjX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -180,6 +179,10 @@
                         <viewLayoutGuide key="safeArea" id="0P4-Y7-79M"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="&lt; Back" id="FLn-xV-625"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PrS-g7-6Qc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -191,6 +194,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="E25-xg-30i" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EUy-vd-6ta">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -210,7 +214,7 @@
                     <tabBarItem key="tabBarItem" title="User" image="person.fill" catalog="system" id="GO0-g7-o3f"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zfA-m2-KJj">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

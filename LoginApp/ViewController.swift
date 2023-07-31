@@ -12,30 +12,18 @@ class ViewController: UIViewController {
     @IBOutlet var UserLabel: UITextField!
     @IBOutlet var passwordLabel: UITextField!
     
-    private let user = "User"
-    private let password = "Password"
+    private let user = "U"
+    private let password = "P"
     
-    
-    //    override func viewDidLoad() {
-    //        super.viewDidLoad()
-    //        // Do any additional setup after loading the view.
-    //    }
-    //
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.user = user
     }
     
-    
-    
-    @IBAction func correctLogin(_ sender: Any) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
-    
-//    override func performSegue(withIdentifier identifier: String, sender: Any?) {
-//        <#code#>
-//    }
-    
-    
     
     
     @IBAction func forgotUserPassword(_ sender: UIButton) {
@@ -44,7 +32,7 @@ class ViewController: UIViewController {
         } else {
             showAlert(title: "Oops!", message: "Your password is \(password) 😉")
         }
-    } 
+    }
     
     @IBAction func validLogin() {
         guard UserLabel.text == user, passwordLabel.text == password
@@ -53,9 +41,15 @@ class ViewController: UIViewController {
             return
         }
         performSegue(withIdentifier: "showWelcomeVC", sender: nil)
+        
     }
     
-   
+    func unwindSegue(segue: UIStoryboardSegue) {
+        UserLabel.text = ""
+        passwordLabel.text = ""
+    }
+    
+    
     
     private func showAlert(title: String, message: String) {
         let showAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
