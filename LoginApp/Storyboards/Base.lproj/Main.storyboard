@@ -118,6 +118,7 @@
                         <viewLayoutGuide key="safeArea" id="wzX-F4-t2n"/>
                         <color key="backgroundColor" red="0.98938173365966309" green="1" blue="0.83852262850829939" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="JMi-hl-zJS" firstAttribute="centerX" secondItem="wzX-F4-t2n" secondAttribute="centerX" id="dYs-kg-kil"/>
                             <constraint firstItem="JMi-hl-zJS" firstAttribute="top" secondItem="wzX-F4-t2n" secondAttribute="top" constant="93" id="j2M-uR-Nva"/>
                             <constraint firstItem="JMi-hl-zJS" firstAttribute="leading" secondItem="wzX-F4-t2n" secondAttribute="leading" constant="16" id="qvd-eV-cF4"/>
                             <constraint firstItem="wzX-F4-t2n" firstAttribute="trailing" secondItem="JMi-hl-zJS" secondAttribute="trailing" constant="16" id="wxN-SM-0JM"/>
@@ -253,7 +254,7 @@
                     <navigationItem key="navigationItem" id="RDL-Fo-LuD">
                         <barButtonItem key="rightBarButtonItem" title="Bio" id="flz-XC-sYQ">
                             <connections>
-                                <segue destination="muF-IP-YSJ" kind="presentation" id="kBb-zu-cca"/>
+                                <segue destination="gFA-Uc-Znh" kind="show" id="VUJ-qp-pa1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -270,38 +271,38 @@
             </objects>
             <point key="canvasLocation" x="2531.25" y="819.71830985915494"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="ASE-yt-lWH">
+        <!--Bio View Controller-->
+        <scene sceneID="okn-tW-XB5">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="muF-IP-YSJ" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="RL1-XZ-ZLa">
+                <viewController id="gFA-Uc-Znh" customClass="BioViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SLr-2g-xHq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="text about" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXW-2f-B4d">
-                                <rect key="frame" x="95" y="172" width="130" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text about..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7z-ZH-y8c">
+                                <rect key="frame" x="30" y="112.5" width="260" height="386.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ew-Kv-d37">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="Back" id="eRe-Yu-GPG"/>
-                                </items>
-                            </toolbar>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="0P4-Y7-79M"/>
+                        <viewLayoutGuide key="safeArea" id="ie6-BK-j8t"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="p7z-ZH-y8c" firstAttribute="leading" secondItem="ie6-BK-j8t" secondAttribute="leading" constant="30" id="0Pt-vV-tKC"/>
+                            <constraint firstItem="ie6-BK-j8t" firstAttribute="trailing" secondItem="p7z-ZH-y8c" secondAttribute="trailing" constant="30" id="LBt-cz-HNW"/>
+                            <constraint firstItem="ie6-BK-j8t" firstAttribute="bottom" secondItem="p7z-ZH-y8c" secondAttribute="bottom" constant="20" id="utO-11-XFA"/>
+                            <constraint firstItem="p7z-ZH-y8c" firstAttribute="top" secondItem="ie6-BK-j8t" secondAttribute="top" constant="20" id="y4r-p8-NnA"/>
+                        </constraints>
                     </view>
-                    <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationItem key="navigationItem" id="k3N-bv-Fsz"/>
+                    <connections>
+                        <outlet property="textaboutLabel" destination="p7z-ZH-y8c" id="hab-4E-6eP"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PrS-g7-6Qc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jQR-Wl-gqa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3319" y="820"/>
+            <point key="canvasLocation" x="3406.875" y="819.71830985915494"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5dI-fK-jtT">
@@ -328,8 +329,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="woJ-zw-jcS" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="User" image="person.fill" catalog="system" id="GO0-g7-o3f"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zfA-m2-KJj">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="zfA-m2-KJj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     private let password = ""
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       // guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        // guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         //welcomeVC.user = user
     }
     
@@ -45,8 +45,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
-        UserLabel.text = "U"
-        passwordLabel.text = "P"
+        UserLabel.text = ""
+        passwordLabel.text = ""
     }
     
     

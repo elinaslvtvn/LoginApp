@@ -8,7 +8,7 @@
 import UIKit
 
 final class UserInfoViewController: UIViewController {
-
+    
     @IBOutlet var avatarImage: UIImageView!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var patronymic: UILabel!
@@ -22,15 +22,10 @@ final class UserInfoViewController: UIViewController {
         super.viewDidLoad()
         title = user.person.fullName
         avatarImage.image = UIImage(named: user.person.photo)
-     nameLabel.text = "\(user.person.name)"
+        nameLabel.text = "\(user.person.name)"
         surnameLabel.text = "\(user.person.surname)"
         patronymic.text = "\(user.person.patronymic)"
         ageLabel.text = "\(user.person.age)"
         cityLabel.text = "\(user.person.city)"
-        
     }
-    
-
-    
-
 }

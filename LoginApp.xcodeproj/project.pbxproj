@@ -17,6 +17,7 @@
 		F75345272A77D5AF0046F7DF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75345262A77D5AF0046F7DF /* TabBarController.swift */; };
 		F75345292A77D9060046F7DF /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75345282A77D9060046F7DF /* UserInfoViewController.swift */; };
 		F75345322A98CCAD0046F7DF /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75345312A98CCAD0046F7DF /* Users.swift */; };
+		F75345362AA0A8C60046F7DF /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75345352AA0A8C60046F7DF /* BioViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		F75345262A77D5AF0046F7DF /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F75345282A77D9060046F7DF /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		F75345312A98CCAD0046F7DF /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		F75345352AA0A8C60046F7DF /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BioViewController.swift; path = LoginApp/Storyboards/BioViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		F753452A2A972B1F0046F7DF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F75345352AA0A8C60046F7DF /* BioViewController.swift */,
 				F75344F42A6925360046F7DF /* ViewController.swift */,
 				F75345042A6ACC560046F7DF /* WelcomeViewController.swift */,
 				F75345262A77D5AF0046F7DF /* TabBarController.swift */,
@@ -197,6 +200,7 @@
 				F75345272A77D5AF0046F7DF /* TabBarController.swift in Sources */,
 				F75344F32A6925360046F7DF /* SceneDelegate.swift in Sources */,
 				F75345322A98CCAD0046F7DF /* Users.swift in Sources */,
+				F75345362AA0A8C60046F7DF /* BioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
