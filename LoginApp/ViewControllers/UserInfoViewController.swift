@@ -7,23 +7,30 @@
 
 import UIKit
 
-class UserInfoViewController: UIViewController {
+final class UserInfoViewController: UIViewController {
 
+    @IBOutlet var avatarImage: UIImageView!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var patronymic: UILabel!
+    @IBOutlet var surnameLabel: UILabel!
+    @IBOutlet var ageLabel: UILabel!
+    @IBOutlet var cityLabel: UILabel!
+    
+    var user = User.getUser()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        title = user.person.fullName
+        avatarImage.image = UIImage(named: user.person.photo)
+     nameLabel.text = "\(user.person.name)"
+        surnameLabel.text = "\(user.person.surname)"
+        patronymic.text = "\(user.person.patronymic)"
+        ageLabel.text = "\(user.person.age)"
+        cityLabel.text = "\(user.person.city)"
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

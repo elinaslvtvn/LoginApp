@@ -12,12 +12,12 @@ class ViewController: UIViewController {
     @IBOutlet var UserLabel: UITextField!
     @IBOutlet var passwordLabel: UITextField!
     
-    private let user = "U"
-    private let password = "P"
+    private let login = ""
+    private let password = ""
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.user = user
+       // guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        //welcomeVC.user = user
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -28,14 +28,14 @@ class ViewController: UIViewController {
     
     @IBAction func forgotUserPassword(_ sender: UIButton) {
         if sender.tag == 0 {
-            showAlert(title: "Oops!", message: "Your login is \(user) 😉")
+            showAlert(title: "Oops!", message: "Your login is \(login) 😉")
         } else {
             showAlert(title: "Oops!", message: "Your password is \(password) 😉")
         }
     }
     
     @IBAction func validLogin() {
-        guard UserLabel.text == user, passwordLabel.text == password
+        guard UserLabel.text == login, passwordLabel.text == password
         else {
             showAlert(title: "Oops!", message: "Invalid login or password")
             return
@@ -45,8 +45,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
-        UserLabel.text = ""
-        passwordLabel.text = ""
+        UserLabel.text = "U"
+        passwordLabel.text = "P"
     }
     
     
